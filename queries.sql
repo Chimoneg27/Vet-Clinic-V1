@@ -66,23 +66,18 @@ FROM animals;
 
 SELECT COUNT(id) 
 FROM animals 
-WHERE escape_attempts > 0;
+WHERE escape_attempts = 0;
 
 SELECT AVG(weight_kg) 
 FROM animals;
 
-SELECT COUNT(id)
-FROM animals 
-WHERE neutered = true;
-
-SELECT COUNT(id)
-FROM animals
-WHERE neutered = false;
---Neutered animals try to escape more often;
-
 --GROUP BY
+SELECT neutered, AVG(escape_attempts) FROM animals
+GROUP BY neutered;
+
 SELECT species, 
-MAX(weight_kg)
+MAX(weight_kg),
+MIN(weight_kg)
 FROM animals
 GROUP BY species;
 
