@@ -61,6 +61,7 @@
 
 - **[Animal data]**
 - **[A simplle RDBMS]**
+- **[A folder for my query screenshots]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
