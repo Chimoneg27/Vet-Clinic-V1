@@ -24,3 +24,70 @@ WHERE name <> 'Gabumon';
 
 SELECT * FROM animals
 WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+--Vet clinic database: query and update animals table
+
+BEGIN;
+UPDATE animals
+SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+
+BEGIN;
+UPDATE animals
+SET species = 'pokemon'
+SELECT * FROM animals;
+COMMIT;
+
+BEGIN;
+UPDATE animals
+SET species = 'digimon'
+WHERE name LIKE '%mon';
+SELECT * FROM animals;
+COMMIT;
+
+BEGIN;
+DELETE FROM CUSTOMERS;
+SELECT * FROM CUSTOMERS;
+ROLLBACK;
+
+BEGIN;
+DELETE FROM animals
+WHERE date_of_birth > '2020-01-01';
+SAVEPOINT delete_date;
+UPDATE animals
+SET weight_kg = weight_kg * - 1;
+ROLLBACK TO delete_date;
+COMMIT;
+
+--AGGREGATE FUNCTIONS
+SELECT COUNT(id) 
+FROM animals;
+
+SELECT COUNT(id) 
+FROM animals 
+WHERE escape_attempts > 0;
+
+SELECT AVG(weight_kg) 
+FROM animals;
+
+SELECT COUNT(id)
+FROM animals 
+WHERE neutered = true;
+
+SELECT COUNT(id)
+FROM animals
+WHERE neutered = false;
+--Neutered animals try to escape more often;
+
+--GROUP BY
+SELECT species, 
+MAX(weight_kg)
+FROM animals
+GROUP BY species;
+
+SELECT species, 
+AVG(escape_attempts)
+FROM animals
+WHERE date_of_birth >= '1990-01-01' AND date_of_birth <= '2000-12-31' 
+GROUP BY species;
