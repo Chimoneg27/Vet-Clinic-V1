@@ -62,6 +62,9 @@
 - **[Animal data]**
 - **[A simplle RDBMS]**
 - **[A folder for my query screenshots]**
+- **[A query.sql fie]**
+- **[A data.sql file]**
+- **[A schema.sql file]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
