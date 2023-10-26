@@ -9,3 +9,20 @@ CREATE TABLE animals (
 
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(45);
+
+CREATE TABLE owners (
+    id SERIAL PRIMARY KEY,
+    full_name VARCHAR(255),
+    age INTEGER
+);
+
+CREATE TABLE species (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+ALTER TABLE animals
+ADD COLUMN owners integer REFERENCES owners(id);
+
+ALTER TABLE animals
+ADD COLUMN species integer REFERENCES species(id);
