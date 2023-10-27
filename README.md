@@ -65,6 +65,7 @@
 - **[A query.sql fie]**
 - **[A data.sql file]**
 - **[A schema.sql file]**
+- **[A query.sql file containing all my queries]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
