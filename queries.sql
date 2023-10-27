@@ -164,3 +164,18 @@ JOIN vets ve ON ve.id = v.vet_id
 where ve.name = 'Maisy Smith'
 GROUP BY s.name
 ORDER BY count(a.id) DESC;
+
+SELECT a.name, v.date_of_visit 
+FROM animals a 
+JOIN visits v ON v.animal_id = a.id 
+JOIN vets ve ON ve.id = v.vet_id 
+WHERE ve.name = 'Stephanie Mendez' AND v.date_of_visit 
+BETWEEN '2020-04-01' AND '2020-08-30';
+
+SELECT a.name 
+FROM animals a 
+JOIN visits v ON v.animal_id = a.id 
+JOIN vets ve ON ve.id = v.vet_id 
+WHERE ve.name = 'Maisy Smith' 
+ORDER BY v.date_of_visit ASC
+LIMIT 1;
