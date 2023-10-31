@@ -49,3 +49,10 @@ CREATE TABLE visits (
     vet_id integer REFERENCES vets(id),
     date_of_visit DATE
 );
+
+--Explain Analyze
+
+CREATE INDEX idx_animal_id ON visits (animal_id);
+CREATE INDEX vet_index ON visits(vet_id)
+INCLUDE (id,animal_id,date_of_visit)
+WHERE vet_id = 2;
