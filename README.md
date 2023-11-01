@@ -159,11 +159,18 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Garvin Chimone**
 
 - GitHub: [@Chimoneg27](https://github.com/Chimoneg27)
 - Twitter: [@GarvinChimone](https://twitter.com/GarvinChimone)
 - LinkedIn: [Garvin Chimone](https://www.linkedin.com/in/garvin-chimone-37208924a/)
+
+👤 **Fombi Magnus-Favour**
+
+- GitHub: [Fombi-Favour](https://github.com/Fombi-Favour)
+- Twitter: [@FavourFombi](https://twitter.com/FavourFombi)
+- LinkedIn: [Fombi Favour](https://www.linkedin.com/in/fombi-favour/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
