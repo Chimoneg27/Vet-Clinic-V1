@@ -16,6 +16,9 @@ CREATE TABLE owners (
     age INTEGER
 );
 
+ALTER TABLE owners 
+ADD COLUMN email VARCHAR(120);
+
 CREATE TABLE species (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
@@ -46,3 +49,13 @@ CREATE TABLE visits (
     vet_id integer REFERENCES vets(id),
     date_of_visit DATE
 );
+
+--Explain Analyze
+CREATE INDEX email_index ON owners(email);
+
+EXPLAIN ANALYZE SELECT * FROM owners WHERE email='owner_18327@mal.com';
+
+CREATE INDEX idx_animal_id ON visits (animal_id);
+CREATE INDEX vet_index ON visits(vet_id)
+INCLUDE (id,animal_id,date_of_visit)
+WHERE vet_id = 2;
