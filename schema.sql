@@ -51,6 +51,9 @@ CREATE TABLE visits (
 );
 
 --Explain Analyze
+CREATE INDEX email_index ON owners(email);
+
+EXPLAIN ANALYZE SELECT * FROM owners WHERE email='owner_18327@mal.com';
 
 CREATE INDEX idx_animal_id ON visits (animal_id);
 CREATE INDEX vet_index ON visits(vet_id)
